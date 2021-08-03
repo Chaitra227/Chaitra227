@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <parameter name="password" value="SuperSecretPassword!"/>
+  <parameter name="username" value="tomsmith"/>
+  <test thread-count="2" name="seleniumTest(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="featureOne"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testNG.GoogleSearch">
+        <methods>
+          <include name="cypressTest"/>
+        </methods>
+      </class> <!-- testNG.GoogleSearch -->
+    </classes>
+  </test> <!-- seleniumTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

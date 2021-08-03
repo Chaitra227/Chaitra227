@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<parameter name="username" value="tomsmith"/>
+<parameter name="password" value="SuperSecretPassword!"/>
+  <test thread-count="5" name="Test">
+  
+ <!--    <groups>
+  <define name = "all" >
+  <include name= "featureOne"/>
+  <include name= "featureTwo"/>
+  </define>
+  <run>
+  <include name= "all"/>
+  </run>
+  </groups>  -->
+  
+  <groups>
+  <run>
+  <include name= "featureTwo"/>
+  </run>
+  </groups>
+  
+  
+    <classes>
+     <!-- <class name="testNG.Google_Priority"/>
+    <class name="testNG.Login"/>  -->
+    
+     <class name="testNG.GoogleSearch"/> 
+    
+    </classes>
+    
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
